@@ -30,17 +30,18 @@ const NavLink = styled(Link)`
     }
 `; 
 
+
 export const Navigation = () => {
 
 	const result = useStaticQuery(graphql`
         query {
-            allStrapiPages {
-                    nodes {
-                        name
-                        id
-                    }
-            }
+			allStrapiPages(filter:{name: { ne:"Home" }}){
+				nodes{
+					name
+			  id
+			}
         }
+		}
     `);
  
 	const pages = result.allStrapiPages.nodes;
