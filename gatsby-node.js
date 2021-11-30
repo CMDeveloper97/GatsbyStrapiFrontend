@@ -16,9 +16,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 				}
 		  }
 		}
-   `)
- 
-   console.log(JSON.stringify(result));
+   `) 
 
    if(result.errors){
 	reporter.panic("No results", result.errors);
