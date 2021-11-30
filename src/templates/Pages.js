@@ -31,17 +31,17 @@ query($id: String!) {
 			name
       content
       id
-      # image{
-      #     localFile {
-      #           childImageSharp {                  
-      #             gatsbyImageData(    
-			# 		          layout: FULL_WIDTH 
-			# 		          placeholder: BLURRED
-      #    			      formats: [AUTO, WEBP, AVIF],  
-			# 	  )
-      #           }
-      #         }
-      #   }
+      image{
+          localFile {
+                childImageSharp {                  
+                  gatsbyImageData(    
+					          layout: FULL_WIDTH 
+					          placeholder: BLURRED
+         			      formats: [AUTO, WEBP, AVIF],  
+				  )
+                }
+              }
+        }
     }
   }
 }
@@ -53,7 +53,7 @@ const Page = ({ data: { allStrapiPages: {nodes} } }) => {
   console.log(nodes)
 
   const {name, content, image} = nodes[0];
-  // const imageToShow = getImage(image.localFile);
+  const imageToShow = getImage(image.localFile);
   
   return (
     <div>
@@ -62,7 +62,7 @@ const Page = ({ data: { allStrapiPages: {nodes} } }) => {
            <Title>{name}</Title>
             <ContentPage> 
               <p>{content}</p>
-              {/* <GatsbyImage image={imageToShow}  /> */}
+              <GatsbyImage image={imageToShow}  />
             </ContentPage> 
           </main>   
 
