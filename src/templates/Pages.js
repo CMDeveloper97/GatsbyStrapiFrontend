@@ -31,17 +31,7 @@ query($id: String) {
 			name
       content
       id
-      image{
-          localFile {
-                childImageSharp {                  
-                  gatsbyImageData(    
-					          layout: FULL_WIDTH 
-					          placeholder: BLURRED
-         			      formats: [AUTO, WEBP, AVIF],  
-				  )
-                }
-              }
-        }
+      
     }
   }
 }
