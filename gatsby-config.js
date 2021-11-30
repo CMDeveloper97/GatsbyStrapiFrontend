@@ -27,13 +27,11 @@ module.exports = {
           breakpoints: [750, 1080, 1366, 1920], 
         }
       }
-    },
+    }, 
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: process.env.NODE_ENV === 'production'
-          ? "https://gentle-sands-08797.herokuapp.com"
-          : `http://localhost:1337`,
+        apiURL:  "https://gentle-sands-08797.herokuapp.com",
         queryLimit: 1000, // Defaults to 100
         collectionTypes: [`propierties`, `pages`, `categories`], 
       },
