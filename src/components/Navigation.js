@@ -30,30 +30,29 @@ const NavLink = styled(Link)`
     }
 `; 
 
-
 export const Navigation = () => {
 
-	// const result = useStaticQuery(graphql`
-    //     query {
-	// 		allStrapiPages(filter:{name: { ne:"Home" }}){
-	// 			nodes{
-	// 				name
-	// 		  id
-	// 		}
-    //     }
-	// 	}
-    // `);
+	const result = useStaticQuery(graphql`
+        query {
+            allStrapiPages {
+                    nodes {
+                        name
+                        id
+                    }
+            }
+        }
+    `);
  
-	// const pages = result.allStrapiPages.nodes;
+	const pages = result.allStrapiPages.nodes;
 
 	console.log(pages);
 
 	return (
 		<Nav>
 			<NavLink activeClassName="actual-page" to="/">Home</NavLink>
-			{/* {pages.map(page => ( 
+			{pages.map(page => ( 
 				<NavLink key={page.id} activeClassName="actual-page" to={`/${urlSlug(page.name)}`}>{page.name}</NavLink>
-			))} */}
+			))}
 			{/* 
 			<NavLink activeClassName="actual-page" to="/about">About</NavLink>
 			<NavLink activeClassName="actual-page" to="/propierties">Propierties</NavLink> */}
