@@ -38,7 +38,7 @@ export const useFilter = () => {
 	const FiltroUI = () => (
 		<Form>
 			<Select onChange={e=>setCategory(e.target.value)} value={category}>
-				<option value="">-- Todas --</option> 
+				<option value="">-- All --</option> 
 				{categories.map(option=>(
 					<option key={option.id} value={option.name} >{option.name}</option>
 				))} 
