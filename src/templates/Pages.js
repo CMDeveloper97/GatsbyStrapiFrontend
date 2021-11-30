@@ -33,7 +33,8 @@ query($id: String!) {
       id
       image{
           localFile {
-                childImageSharp {                  gatsbyImageData(    
+                childImageSharp {                  
+                  gatsbyImageData(    
 					          layout: FULL_WIDTH 
 					          placeholder: BLURRED
          			      formats: [AUTO, WEBP, AVIF],  
