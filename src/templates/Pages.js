@@ -25,7 +25,7 @@ const Title = styled.h1`
 `; 
 
 export const query = graphql` 
-query($id: String!) {
+query($id: String) {
   allStrapiPages(filter: {id: {eq: $id}}){
 		nodes{
 			name
