@@ -38,7 +38,7 @@ const Content = styled.div`
         color: #75AB00;
     }
 `
-
+ 
 const CardImage = styled.div`
     height:250px;
 `;
