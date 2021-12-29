@@ -63,7 +63,7 @@ export const PropiertyPreview = ({propierty}) => {
 					rooms={rooms}
 				/>  
 
-                <Button to={ urlSlug(name)}>Visit propierty</Button>
+                <Button to={ '/'+urlSlug(name)}>Visit propierty</Button>
 			</Content>
 		</Card>
 	)
