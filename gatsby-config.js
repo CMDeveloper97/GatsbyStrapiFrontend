@@ -50,7 +50,7 @@ module.exports = {
     },
     {
       resolve: `gatsby-plugin-manifest`,
-      options: {
+      options: { 
         name: `gatsby-starter-default`, 
         short_name: `starter`,
         start_url: `/`,
